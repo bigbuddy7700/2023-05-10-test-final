@@ -1,0 +1,293 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #222328;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb > li {
+    position: relative;
+}
+
+.gnb > li > a {
+    display: block;
+    height: 90px;
+    line-height: 90px;
+    padding: 0 45px;
+}
+
+.gnb > li:hover > a {
+    color: burlywood;
+}
+
+.gnb ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    background-color: #eee;
+    padding: 8px 0;
+    z-index: 1;
+    display: none;
+}
+
+.gnb ul li a {
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.gnb ul li a:hover {
+    background-color: burlywood;
+    color: #fff;
+}
+
+/* slide */
+.slider {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+}
+
+/* contents */
+.contents {
+    height: 200px;
+    padding: 10px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.tab {
+    flex: 1;
+}
+
+.tab_title {
+    display: flex;
+    gap: 4px;
+    position: relative;
+}
+
+.tab_title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: blueviolet;
+}
+
+.tab_title h2 {
+    height: 50px;
+    line-height: 50px;
+    background-color: #eee;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    width: 100%;
+    cursor: pointer;
+}
+
+.tab_title h2.on {
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.tab_contents {
+    height: 130px;
+    position: relative;
+}
+
+.tab_contents ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
+}
+
+.notice {
+    width: 400px;
+}
+
+.notice li a {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 5px 0;
+}
+
+.notice li a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+.gallery {
+    gap: 10px;
+    height: 130px;
+    display: none;
+}
+
+.gallery li {
+    height: 100%;
+    width: 30%;
+    float: left;
+    margin-right: 2%;
+}
+
+.gallery li:last-child {
+    margin: 0;
+}
+
+.gallery li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner {
+    flex: 1;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.link {
+    flex: 1;
+}
+
+.link ul {
+    display: grid;
+    font-size: 17px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.link ul li a {
+    background-color: #ddd;
+    display: block;
+    height: 85px;
+    line-height: 85px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.link ul li a:hover {
+    background-color: blueviolet;
+}
+
+/* footer */
+.footer {
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.sns {
+    display: flex;
+    gap: 10px;
+}
+
+.sns a {
+    display: block;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.sns a:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+/* modal */
+#modal {
+    width: 600px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #666;
+    padding: 50px 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#modal.active {
+    display: block;
+}
+
+#modal h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+#modal .close {
+    display: block;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ccc;
+    text-align: center;
+    position: absolute;
+    bottom: 60px;
+    right: 50px;
+}
+
+#modal .close:hover {
+    background-color: burlywood;
+}
